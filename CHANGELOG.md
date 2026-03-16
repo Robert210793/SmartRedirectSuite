@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Robert210793/SmartRedirectSuite/compare/v1.0.1...v1.0.2) (2026-03-16)
+
+
+### Bug Fixes
+
+* trigger rebuild for version update ([abd9921](https://github.com/Robert210793/SmartRedirectSuite/commit/abd992175fd6d8ba5443cfdb8ac986068e06764f))
+
 ## [1.0.1](https://github.com/Robert210793/SmartRedirectSuite/compare/v1.0.0...v1.0.1) (2026-03-09)
 
 
