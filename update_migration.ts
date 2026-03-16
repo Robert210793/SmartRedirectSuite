@@ -4,7 +4,7 @@ import path from 'path';
 const filePath = path.join('client', 'src', 'pages', 'migration.tsx');
 let content = fs.readFileSync(filePath, 'utf8');
 
-// 1. Declare variables
+// 1. Declare variables sss
 const initStart = content.indexOf('const initializePage = async () => {');
 if (initStart !== -1) {
     const insertPos = content.indexOf('let currentMatchQuality = 0;', initStart);
