@@ -1,3 +1,11 @@
+## [2.21.1](https://github.com/Robert210793/SmartRedirectSuite/compare/v2.21.0...v2.21.1) (2026-03-16)
+
+
+### Bug Fixes
+
+* align version to 2.21.1 ([6c3534c](https://github.com/Robert210793/SmartRedirectSuite/commit/6c3534c946b11455b03823f6bb3df7c9c4cd528e))
+* align version to 2.21.1 ([f0f3fcc](https://github.com/Robert210793/SmartRedirectSuite/commit/f0f3fcc93ba4c9304e51b049c73e0be2c88f842d))
+
 ## [1.0.2](https://github.com/Robert210793/SmartRedirectSuite/compare/v1.0.1...v1.0.2) (2026-03-16)
 
 
