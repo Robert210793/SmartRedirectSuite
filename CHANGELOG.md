@@ -1,3 +1,10 @@
+## [2.21.2](https://github.com/Robert210793/SmartRedirectSuite/compare/v2.21.1...v2.21.2) (2026-03-18)
+
+
+### Bug Fixes
+
+* bulk delete fails due to optimistic update race condition ([72d43d9](https://github.com/Robert210793/SmartRedirectSuite/commit/72d43d9ef30fff0158f2c217a78f206144827c2e))
+
 ## [2.21.1](https://github.com/Robert210793/SmartRedirectSuite/compare/v2.21.0...v2.21.1) (2026-03-16)
 
 
