@@ -1050,28 +1050,13 @@ export default function AdminPage({ onClose }: AdminPageProps) {
   // Bulk delete mutation
   const bulkDeleteRulesMutation = useMutation({
     mutationFn: async (ruleIds: string[]) => {
-      // Critical safety check: Ensure we only delete rules from the current page
-      const currentPageRuleIds = paginatedRules.map(rule => rule.id);
-      const validRuleIds = ruleIds.filter(id => currentPageRuleIds.includes(id));
-      
-      if (validRuleIds.length === 0) {
-        throw new Error('No valid rules selected from current page for deletion');
+      if (ruleIds.length === 0) {
+        throw new Error('No rule IDs provided for deletion');
       }
-      
-      if (validRuleIds.length !== ruleIds.length) {
-        const invalidCount = ruleIds.length - validRuleIds.length;
-        throw new Error(`${invalidCount} selected rules are not on the current page. Only ${validRuleIds.length} will be deleted.`);
-      }
-      
-      // Additional safety: Never delete more than what's visible on current page
-      if (validRuleIds.length > paginatedRules.length) {
-        throw new Error(`Safety error: Trying to delete ${validRuleIds.length} rules but only ${paginatedRules.length} visible on page`);
-      }
-      
-      console.log(`BULK DELETE SAFETY CHECK: Deleting ${validRuleIds.length} rules from current page (${paginatedRules.length} total on page)`, validRuleIds.slice(0, 5));
 
-      // Use the dedicated bulk delete endpoint with ONLY valid IDs
-      const response = await apiRequest("DELETE", "/api/admin/bulk-delete-rules", { ruleIds: validRuleIds });
+      console.log(`BULK DELETE: Deleting ${ruleIds.length} rules`, ruleIds.slice(0, 5));
+
+      const response = await apiRequest("DELETE", "/api/admin/bulk-delete-rules", { ruleIds });
       return await response.json();
     },
     //Optimistic UI update -- immediately remove all selected rules from cache
